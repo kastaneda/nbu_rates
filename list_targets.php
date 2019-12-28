@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 $kiev_tz = new DateTimeZone('Europe/Kiev');
