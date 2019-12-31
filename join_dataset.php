@@ -6,15 +6,16 @@ $currencies = ['USD', 'EUR', 'GBP', 'PLN', 'CZK'];
 // CSV header
 echo 'Date,' . join(',', $currencies) . PHP_EOL;
 
+$dir = __DIR__ . '/data/';
 $files = array_filter(
-    scandir(__DIR__, SCANDIR_SORT_ASCENDING),
+    scandir($dir, SCANDIR_SORT_ASCENDING),
     function ($filename) {
         return preg_match('/^\d{8}.json$/', $filename);
     }
 );
 
 foreach ($files as $filename) {
-    $dataset = json_decode(file_get_contents($filename), true);
+    $dataset = json_decode(file_get_contents($dir . $filename), true);
 
     // Date
     $date_y = substr($filename, 0, 4);

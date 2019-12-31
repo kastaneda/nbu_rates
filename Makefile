@@ -7,5 +7,5 @@ nbu_rates.ods: nbu_rates.csv
 	# https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Filter_Options
 	libreoffice --headless --infilter="CSV:44,34,76,1,1,1/5" --convert-to ods $<
 
-%.json:
+data/%.json:
 	wget "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=$*&json" -O $@ || rm $@
