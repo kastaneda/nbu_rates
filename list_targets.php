@@ -3,7 +3,7 @@
 
 $one_day = new DateInterval('P1D');
 $kiev_tz = new DateTimeZone('Europe/Kiev');
-$date_start = new DateTime('2007-01-01', $kiev_tz);
+$date_start = new DateTime('2000-01-01', $kiev_tz);
 $date_end = new DateTime(null, $kiev_tz);
 
 $hour = (int) date('H');
