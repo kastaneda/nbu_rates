@@ -11,7 +11,7 @@ $date_start = new DateTime('1996-09-02', $kiev_tz);
 
 // Untill today
 $date_end = new DateTime(null, $kiev_tz);
-if (( int(date('H')) >= 16) {
+if ((int) date('H') >= 16) {
     // On 16:00, rates for the next day will be published
     $date_end = $date_end->add($one_day);
 }
