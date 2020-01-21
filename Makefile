@@ -1,5 +1,8 @@
 TARGETS := $(shell php list_targets.php)
 
+download: $(TARGETS)
+.PHONY: downloads
+
 nbu_rates.csv: $(TARGETS)
 	php join_dataset.php > $@
 
