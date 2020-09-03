@@ -17,6 +17,11 @@ $files = array_filter(
 foreach ($files as $filename) {
     $dataset = json_decode(file_get_contents($dir . $filename), true);
 
+    if (!is_array($dataset) || empty($dataset)) {
+        fwrite(STDERR, 'Error in: ' . $filename . PHP_EOL);
+        continue;
+    }
+
     // Date
     $date_y = substr($filename, 0, 4);
     $date_m = substr($filename, 4, 2);
