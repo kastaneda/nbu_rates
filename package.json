@@ -1,0 +1,11 @@
+{
+  "name": "nbu_rates",
+  "version": "0.0.1",
+  "description": "Currency rates archive from National Bank of Ukraine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kastaneda/nbu_rates.git"
+  },
+  "author": "Dmytro Kolesnykov",
+  "license": "CC0-1.0"
+}
