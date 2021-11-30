@@ -11,4 +11,4 @@ nbu_rates.ods: nbu_rates.csv
 	libreoffice --headless --infilter="CSV:44,34,76,1,1,1/5" --convert-to ods $<
 
 data/%.json:
-	wget "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=$*&json" -O $@ || rm $@
+	wget -q "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=$*&json" -O $@ || rm $@
